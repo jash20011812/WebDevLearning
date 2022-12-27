@@ -1,0 +1,75 @@
+
+<body>
+    <div class="cube">
+        <div class="side front"></div>
+        <div class="side back"></div>
+        <div class="side left"></div>
+        <div class="side right"></div>
+        <div class="side top"></div>
+        <div class="side bottom"></div>
+      </div>
+      
+</body>
+  <style>
+
+    body {
+        text-align: center;
+        margin: 100 auto 100 auto;
+    }
+    /* CSS styles for the cube */
+    .cube {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: rotate 5s linear infinite;
+      margin: 100 auto;
+    }
+  
+    .side {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+    }
+  
+    .front {
+      background-color: blue;
+      transform: rotateY(0deg) translateZ(100px);
+    }
+  
+    .back {
+      background-color: green;
+      transform: rotateY(180deg) translateZ(100px);
+    }
+  
+    .left {
+      background-color: orange;
+      transform: rotateY(-90deg) translateZ(100px);
+    }
+  
+    .right {
+      background-color: red;
+      transform: rotateY(90deg) translateZ(100px);
+    }
+  
+    .top {
+      background-color: yellow;
+      transform: rotateX(90deg) translateZ(100px);
+    }
+  
+    .bottom {
+      background-color: purple;
+      transform: rotateX(-90deg) translateZ(100px);
+    }
+  
+    /* CSS animation to rotate the cube */
+    @keyframes rotate {
+      from {
+        transform: rotateY(0deg);
+      }
+      to {
+        transform: rotateY(360deg);
+      }
+    }
+  </style>
+  
